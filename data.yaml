@@ -3,200 +3,266 @@
 advent1:
   custom: "First Lord's Day in Advent"
   2019: "The First Sunday in Advent"
+  rcl: "First Sunday of Advent"
 advent2:
   custom: "Second Lord's Day in Advent"
   2019: "The Second Sunday in Advent"
+  rcl: "Second Sunday of Advent"
 advent3:
   custom: "Third Lord's Day in Advent"
   2019: "The Third Sunday in Advent"
+  rcl: "Third Sunday of Advent"
 advent4:
   custom: "Fourth Lord's Day in Advent"
   2019: "The Fourth Sunday in Advent"
+  rcl: "Fourth Sunday of Advent"
 
 # Christmas
 
 christmas1:
   custom: "First Lord's Day of Christmas"
   2019: "The First Sunday of Christmas"
+  rcl: "First Sunday after Christmas Day"
 christmas2:
   custom: "Second Lord's Day of Christmas"
   2019: "The Second Sunday of Christmas"
+  rcl: "Second Sunday after Christmas Day"
 
 # Epiphany
 
 epiphany1:
   custom: "Epiphany Sunday"
   2019: "The First Sunday of Epiphany"
+  rcl: "Baptism of the Lord"
 epiphany2:
   custom: "Second Lord's Day After Epiphany"
   2019: "The Second Sunday of Epiphany"
+  rcl: "Second Sunday after Epiphany"
 epiphany3:
   custom: "Third Lord's Day After Epiphany"
   2019: "The Third Sunday of Epiphany"
+  rcl: "Third Sunday after Epiphany"
 epiphany4:
   custom: "Fourth Lord's Day After Epiphany"
   2019: "The Fourth Sunday of Epiphany"
+  rcl: "Fourth Sunday after Epiphany"
 epiphany5:
   custom: "Fifth Lord's Day After Epiphany"
   2019: "The Fifth Sunday of Epiphany"
+  rcl: "Fifth Sunday after Epiphany"
 epiphany6:
   custom: "Sixth Lord's Day After Epiphany"
   2019: "The Sixth Sunday of Epiphany"
+  rcl: "Sixth Sunday after Epiphany"
 epiphany7:
   custom: "Seventh Lord's Day After Epiphany"
   2019: "The Seventh Sunday of Epiphany"
+  rcl: "Seventh Sunday after Epiphany"
 epiphany8:
   custom: "Eighth Lord's Day After Epiphany"
   2019: "The Eighth Sunday of Epiphany"
+  rcl: "Eighth Sunday after Epiphany"
 epiphany9:
   custom: "Ninth Lord's Day After Epiphany"
   2019: "The Ninth Sunday of Epiphany"
+  rcl: "Ninth Sunday after Epiphany"
 epiphany10:
   custom: "Tenth Lord's Day After Epiphany"
   2019: "The Tenth Sunday of Epiphany"
+  rcl: "Tenth Sunday after Epiphany"
+
+# TODO: Find a way to include Transfiguration Sunday
 
 # Lent
 
 lent1:
   custom: "First Lord's Day in Lent"
   2019: "The First Sunday in Lent"
+  rcl: "First Sunday in Lent"
 lent2:
   custom: "Second Lord's Day in Lent"
   2019: "The Second Sunday in Lent"
+  rcl: "Second Sunday in Lent"
 lent3:
   custom: "Third Lord's Day in Lent"
   2019: "The Third Sunday in Lent"
+  rcl: "Third Sunday in Lent"
 lent4:
   custom: "Fourth Lord's Day in Lent"
   2019: "The Fourth Sunday in Lent"
+  rcl: "Fourth Sunday in Lent"
 lent5:
   custom: "Fifth Lord's Day in Lent"
   2019: "The Fifth Sunday in Lent"
+  rcl: "Fifth Sunday in Lent"
 lent6:
   custom: "Palm Sunday"
   2019: "Palm Sunday"
+  rcl: "Liturgy of the Palms & Passion"
 
 # Easter
 
 easter1:
   custom: "Resurrection Sunday"
   2019: "Easter Day"
+  rcl: "Resurrection of the Lord"
 easter2:
   custom: "First Lord's Day After Easter"
   2019: "The Second Sunday of Easter"
+  rcl: "Second Sunday of Easter"
 easter3:
   custom: "Second Lord's Day After Easter"
   2019: "The Third Sunday of Easter"
+  rcl: "Third Sunday of Easter"
 easter4:
   custom: "Third Lord's Day After Easter"
   2019: "The Fourth Sunday of Easter"
+  rcl: "Fourth Sunday of Easter"
 easter5:
   custom: "Fourth Lord's Day After Easter"
   2019: "The Fifth Sunday of Easter"
+  rcl: "Fifth Sunday of Easter"
 easter6:
   custom: "Fifth Lord's Day After Easter"
   2019: "The Sixth Sunday of Easter"
+  rcl: "Sixth Sunday of Easter"
 ascension:
   custom: "Ascension Sunday"
   2019: "The Sunday After Ascension Day"
+  rcl: "Ascension of the Lord"
 pentecost:
   custom: "Pentecost Sunday"
   2019: "Day of Pentecost"
+  rcl: "Day of Pentecost"
 
 # Trinity
 
 trinity1:
-  custom: "Trinity Sunday"
-  2019: "Trinity Sunday"
+  custom: "Trinity Sunday (custom)"
+  2019: "Trinity Sunday (2019)"
+  rcl: "Trinity Sunday (RCL)"
 trinity2:
   custom: "Second Lord's Day After Pentecost"
   2019: "The Second Sunday After Pentecost"
+  rcl: "Second Sunday after Pentecost"
 trinity3:
   custom: "Third Lord's Day After Pentecost"
   2019: "The Third Sunday After Pentecost"
+  rcl: "Third Sunday after Pentecost"
 trinity4:
   custom: "Fourth Lord's Day After Pentecost"
   2019: "The Fourth Sunday After Pentecost"
+  rcl: "Fourth Sunday after Pentecost"
 trinity5:
   custom: "Fifth Lord's Day After Pentecost"
   2019: "The Fifth Sunday After Pentecost"
+  rcl: "Fifth Sunday after Pentecost"
 trinity6:
   custom: "Sixth Lord's Day After Pentecost"
   2019: "The Sixth Sunday After Pentecost"
+  rcl: "Sixth Sunday after Pentecost"
 trinity7:
   custom: "Seventh Lord's Day After Pentecost"
   2019: "The Seventh Sunday After Pentecost"
+  rcl: "Seventh Sunday after Pentecost"
 trinity8:
   custom: "Eighth Lord's Day After Pentecost"
   2019: "The Eighth Sunday After Pentecost"
+  rcl: "Eighth Sunday after Pentecost"
 trinity9:
   custom: "Ninth Lord's Day After Pentecost"
   2019: "The Ninth Sunday After Pentecost"
+  rcl: "Ninth Sunday after Pentecost"
 trinity10:
   custom: "Tenth Lord's Day After Pentecost"
   2019: "The Tenth Sunday After Pentecost"
+  rcl: "Tenth Sunday after Pentecost"
 trinity11:
   custom: "Eleventh Lord's Day After Pentecost"
   2019: "The Eleventh Sunday After Pentecost"
+  rcl: "Eleventh Sunday after Pentecost"
 trinity12:
   custom: "Twelfth Lord's Day After Pentecost"
   2019: "The Twelfth Sunday After Pentecost"
+  rcl: "Twelfth Sunday after Pentecost"
 trinity13:
   custom: "Thirteenth Lord's Day After Pentecost"
   2019: "The Thirteenth Sunday After Pentecost"
+  rcl: "Thirteenth Sunday after Pentecost"
 trinity14:
   custom: "Fourteenth Lord's Day After Pentecost"
   2019: "The Fourteenth Sunday After Pentecost"
+  rcl: "Fourteenth Sunday after Pentecost"
 trinity15:
   custom: "Fifteenth Lord's Day After Pentecost"
   2019: "The Fifteenth Sunday After Pentecost"
+  rcl: "Fifteenth Sunday after Pentecost"
 trinity16:
   custom: "Sixteenth Lord's Day After Pentecost"
   2019: "The Sixteenth Sunday After Pentecost"
+  rcl: "Sixteenth Sunday after Pentecost"
 trinity17:
   custom: "Seventeenth Lord's Day After Pentecost"
   2019: "The Seventeenth Sunday After Pentecost"
+  rcl: "Seventeenth Sunday after Pentecost"
 trinity18:
   custom: "Eighteenth Lord's Day After Pentecost"
   2019: "The Eighteenth Sunday After Pentecost"
+  rcl: "Eighteenth Sunday after Pentecost"
 trinity19:
   custom: "Nineteenth Lord's Day After Pentecost"
   2019: "The Nineteenth Sunday After Pentecost"
+  rcl: "Nineteenth Sunday after Pentecost"
 trinity20:
   custom: "Twentieth Lord's Day After Pentecost"
   2019: "The Twentieth Sunday After Pentecost"
+  rcl: "Twentieth Sunday after Pentecost"
 trinity21:
   custom: "Twenty-First Lord's Day After Pentecost"
   2019: "The Twenty-First Sunday After Pentecost"
+  rcl: "Twenty-First Sunday after Pentecost"
 trinity22:
   custom: "Twenty-Second Lord's Day After Pentecost"
   2019: "The Twenty-Second Sunday After Pentecost"
+  rcl: "Twenty-Second Sunday after Pentecost"
 trinity23:
   custom: "Twenty-Third Lord's Day After Pentecost"
   2019: "The Twenty-Third Sunday After Pentecost"
+  rcl: "Twenty-Third Sunday after Pentecost"
 trinity24:
   custom: "Twenty-Fourth Lord's Day After Pentecost"
   2019: "The Twenty-Fourth Sunday After Pentecost"
+  rcl: "Twenty-Fourth Sunday after Pentecost"
 trinity25:
   custom: "Twenty-Fifth Lord's Day After Pentecost"
   2019: "The Twenty-Fifth Sunday After Pentecost"
+  rcl: "Twenty-Fifth Sunday after Pentecost"
 trinity26:
   custom: "Twenty-Sixth Lord's Day After Pentecost"
   2019: "The Twenty-Sixth Sunday After Pentecost"
+  rcl: "Twenty-Sixth Sunday after Pentecost"
 trinity27:
   custom: "Twenty-Seventh Lord's Day After Pentecost"
   2019: "The Twenty-Seventh Sunday After Pentecost"
+  rcl: "Twenty-Seventh Sunday after Pentecost"
 trinity28:
   custom: "Twenty-Eighth Lord's Day After Pentecost"
   2019: "The Twenty-Eighth Sunday After Pentecost"
+  rcl: "Twenty-Eighth Sunday after Pentecost"
 trinity29:
   custom: "Twenty-Ninth Lord's Day After Pentecost"
   2019: "The Twenty-Ninth Sunday After Pentecost"
+  rcl: "Twenty-Ninth Sunday after Pentecost"
 king:
   custom: "Christ the King Sunday"
   2019: "Christ the King Sunday"
+  rcl: "Reign of Christ"
 
 # Specials
+
+transfiguration:
+  custom: "Transfiguration Sunday"
+  rcl: "Transfiguration Sunday"
 
 reformation:
   custom: "Reformation Sunday"
@@ -204,3 +270,4 @@ reformation:
 saints:
   custom: "All Saints' Day"
   2019: "All Saints' Day"
+  rcl: "All Saints Day"
