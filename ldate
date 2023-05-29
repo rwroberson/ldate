@@ -5,11 +5,14 @@
 # days, but it may be edited for other traditions.
 
 cal="custom" # options: custom, 2019, rcl
+DOW=$(date +%a)
+DATE=$(date)
 
-while getopts c: flag
+while getopts c:d: flag
 do
 	case "${flag}" in 
 		c) cal=${OPTARG} ;;
+		d) DATE=$(date -d "${OPTARG}") && DOW=$(date -d "${OPTARG}" +%a) ;;
 		*) echo "Invalid option: -$flag" ;;
 	esac
 done
@@ -47,15 +50,14 @@ ASH=$(( $EAS - 47 ))
 TRI=$(( $EAS + 56 ))
 
 # Find next Sunday's Date
-DOW=$(date +%a)
 case $DOW in
-	Sun) SUN=$(date -d "7 days" +%j) ;;
-	Mon) SUN=$(date -d "6 days" +%j) ;;
-	Tue) SUN=$(date -d "5 days" +%j) ;;
-	Wed) SUN=$(date -d "4 days" +%j) ;;
-	Thu) SUN=$(date -d "3 days" +%j) ;;
-	Fri) SUN=$(date -d "2 days" +%j) ;;
-	Sat) SUN=$(date -d "1 days" +%j) ;;
+	Sun) SUN=$(date -d "$DATE 7 days" +%j) ;;
+	Mon) SUN=$(date -d "$DATE 6 days" +%j) ;;
+	Tue) SUN=$(date -d "$DATE 5 days" +%j) ;;
+	Wed) SUN=$(date -d "$DATE 4 days" +%j) ;;
+	Thu) SUN=$(date -d "$DATE 3 days" +%j) ;;
+	Fri) SUN=$(date -d "$DATE 2 days" +%j) ;;
+	Sat) SUN=$(date -d "$DATE 1 days" +%j) ;;
 esac
 
 SUN=${SUN#00}
