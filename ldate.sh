@@ -3,9 +3,9 @@
 # This script prints the name of next Sunday on the church calendar. The script 
 # is designed for my own church's Reformed focus on the five evangelical feast 
 # days, but it may be edited for other traditions.
-#
-#
-# TODO: Finish the dates around Christmas
+
+cal="2019" # options: custom, 2019
+data="data.yaml"
 
 # Define key days
 EAS=$(date -d $(ncal -e) +%j)
@@ -50,40 +50,39 @@ case $DOW in
 esac
 
 SUN=${SUN#00}
+#SUN="300"
 
+# Special days
+
+# TODO: build a test for null cases
 case $SUN in
-	29[7-9] | 30[0-4]) echo "Reformation Sunday" && exit ;;
-	30[5-9] | 31[0-2]) echo "All Saints' Sunday" && exit ;;
+	29[7-9] | 30[0-4]) yq -r ".reformation.\"$cal\"" $data && exit ;;
+	30[5-9] | 31[0-2]) yq -r ".saints.\"$cal\"" $data && exit ;;
 esac
 	
 
 if [[ $SUN -lt $EAS ]]; then
 
 	if [[ $SUN -lt $EPI ]]; then
-		echo "Second Lord's Day in Christmastide"
+		yq -r ".christmas2.\"$cal\"" $data
 		exit
 
-	elif [[ $SUN -eq $EPI ]]; then
-		echo "Ephiphany Sunday"
-		exit
-
-	elif [[ $SUN -gt $EPI ]]; then
+	elif [[ $SUN -ge $EPI ]]; then
 		if [[ $SUN -lt $ASH ]]; then
 
 			# dates after Epiphany
 			WEEK=$(( $SUN - $EPI ))
 			case $WEEK in
-				7)  echo "Second Lord's Day After Epiphany" ;;
-				14) echo "Third Lord's Day After Epiphany" ;;
-				21) echo "Fourth Lord's Day After Epiphany" ;;
-				28) echo "Fifth Lord's Day After Epiphany" ;;
-				35) echo "Sixth Lord's Day After Epiphany" ;;
-				42) echo "Seventh Lord's Day After Epiphany" ;;
-				49) echo "Eighth Lord's Day After Epiphany" ;;
-				56) echo "Ninth Lord's Day After Epiphany" ;;
-				63) echo "Tenth Lord's Day After Epiphany" ;;
-				70) echo "Eleventh Lord's Day After Epiphany" ;;
-				77) echo "Twelfth Lord's Day After Epiphany" ;;
+				0)  yq -r ".epiphany1.\"$cal\"" $data ;;
+				7)  yq -r ".epiphany2.\"$cal\"" $data ;;
+				14) yq -r ".epiphany3.\"$cal\"" $data ;;
+				21) yq -r ".epiphany4.\"$cal\"" $data ;;
+				28) yq -r ".epiphany5.\"$cal\"" $data ;;
+				35) yq -r ".epiphany6.\"$cal\"" $data ;;
+				42) yq -r ".epiphany7.\"$cal\"" $data ;;
+				49) yq -r ".epiphany8.\"$cal\"" $data ;;
+				56) yq -r ".epiphany9.\"$cal\"" $data ;;
+				63) yq -r ".epiphany10.\"$cal\"" $data ;;
 			esac
 			exit
 
@@ -92,19 +91,19 @@ if [[ $SUN -lt $EAS ]]; then
 			# dates in Lent
 			WEEK=$(( $SUN - $ASH ))
 			case $WEEK in
-				5)  echo "First Lord's Day in Lent" ;;
-				12) echo "Second Lord's Day in Lent" ;;
-				19) echo "Third Lord's Day in Lent" ;;
-				26) echo "Fourth Lord's Day in Lent" ;;
-				33) echo "Fifth Lord's Day in Lent" ;;
-				40) echo "Palm Sunday" ;;
+				5)  yq -r ".lent1.\"$cal\"" $data ;;
+				12) yq -r ".lent2.\"$cal\"" $data ;;
+				19) yq -r ".lent3.\"$cal\"" $data ;;
+				26) yq -r ".lent4.\"$cal\"" $data ;;
+				33) yq -r ".lent5.\"$cal\"" $data ;;
+				40) yq -r ".lent6.\"$cal\"" $data ;;
 			esac
 			exit
 		fi
 	fi
 
 elif [[ $SUN -eq $EAS ]]; then
-	echo "Easter Sunday"
+	yq -r ".easter1.\"$cal\"" $data
 	exit
 
 elif [[ $SUN -gt $EAS ]]; then
@@ -113,13 +112,13 @@ elif [[ $SUN -gt $EAS ]]; then
 	if [[ $SUN -lt $TRI ]]; then
 		WEEK=$(( $SUN - $EAS ))
 		case $WEEK in
-			7)  echo "First Lord's Day After Easter" ;;
-			14) echo "Second Lord's Day After Easter" ;;
-			21) echo "Third Lord's Day After Easter" ;;
-			28) echo "Fourth Lord's Day After Easter" ;;
-			35) echo "Fifth Lord's Day After Easter" ;;
-			42) echo "Ascension Sunday" ;;
-			49) echo "Day of Pentecost" ;;
+			7)  yq -r ".easter2.\"$cal\"" $data ;;
+			14) yq -r ".easter3.\"$cal\"" $data ;;
+			21) yq -r ".easter4.\"$cal\"" $data ;;
+			28) yq -r ".easter5.\"$cal\"" $data ;;
+			35) yq -r ".easter6.\"$cal\"" $data ;;
+			42) yq -r ".ascension.\"$cal\"" $data ;;
+			49) yq -r ".pentecost.\"$cal\"" $data ;;
 		esac
 		exit
 	
@@ -128,47 +127,46 @@ elif [[ $SUN -gt $EAS ]]; then
 		if [[ $SUN -gt 324 ]]; then
 			WEEK=$(( $CHR - $SUN ))
 			case $WEEK in
-				35) echo "Christ the King Sunday" ;;
-				28) echo "First Lord's Day in Advent" ;;
-				21) echo "Second Lord's Day in Advent" ;;
-				14) echo "Third Lord's Day in Advent" ;;
-				7)  echo "Fourth Lord's Day in Advent" ;;
-				0)  echo "First Lord's Day in Christmastide" ;;
+				35) yq -r ".king.\"$cal\"" $data ;;
+				28) yq -r ".advent1.\"$cal\"" $data ;;
+				21) yq -r ".advent2.\"$cal\"" $data ;;
+				14) yq -r ".advent3.\"$cal\"" $data ;;
+				7)  yq -r ".advent4.\"$cal\"" $data ;;
+				0)  yq -r ".christmas1.\"$cal\"" $data ;;
 			esac
 			exit
 		else
 			WEEK=$(( $SUN - $TRI ))
 			case $WEEK in
-				0)  echo "Trinity Sunday" ;;
-				7)  echo "First Lord's Day After Trinity" ;;
-				14) echo "Second Lord's Day After Trinity" ;;
-				21) echo "Third Lord's Day After Trinity" ;;
-				28) echo "Fourth Lord's Day After Trinity" ;;
-				35) echo "Fifth Lord's Day After Trinity" ;;
-				42) echo "Sixth Lord's Day After Trinity" ;;
-				49) echo "Seventh Lord's Day After Trinity" ;;
-				56) echo "Eighth Lord's Day After Trinity" ;;
-				63) echo "Ninth Lord's Day After Trinity" ;;
-				70) echo "Tenth Lord's Day After Trinity" ;;
-				77) echo "Eleventh Lord's Day After Trinity" ;;
-				84) echo "Twelfth Lord's Day After Trinity" ;;
-				91) echo "Thirteenth Lord's Day After Trinity" ;;
-				98) echo "Fourteenth Lord's Day After Trinity" ;;
-				105) echo "Fifteenth Lord's Day After Trinity" ;;
-				112) echo "Sixteenth Lord's Day After Trinity" ;;
-				119) echo "Seventeenth Lord's Day After Trinity" ;;
-				126) echo "Eighteenth Lord's Day After Trinity" ;;
-				133) echo "Nineteenth Lord's Day After Trinity" ;;
-				140) echo "Twentieth Lord's Day After Trinity" ;;
-				147) echo "Twenty-first Lord's Day After Trinity" ;;
-				154) echo "Twenty-second Lord's Day After Trinity" ;;
-				161) echo "Twenty-third Lord's Day After Trinity" ;;
-				168) echo "Twenty-fourth Lord's Day After Trinity" ;;
-				175) echo "Twenty-fifth Lord's Day After Trinity" ;;
-				182) echo "Twenty-sixth Lord's Day After Trinity" ;;
-				189) echo "Twenty-seventh Lord's Day After Trinity" ;;
-				196) echo "Twenty-eighth Lord's Day After Trinity" ;;
-				203) echo "Twenty-ninth Lord's Day After Trinity" ;;
+				0)   yq -r ".trinity1.\"$cal\"" $data ;;
+				7)   yq -r ".trinity2.\"$cal\"" $data ;;
+				14)  yq -r ".trinity3.\"$cal\"" $data ;;
+				21)  yq -r ".trinity4.\"$cal\"" $data ;;
+				28)  yq -r ".trinity5.\"$cal\"" $data ;;
+				35)  yq -r ".trinity6.\"$cal\"" $data ;;
+				42)  yq -r ".trinity7.\"$cal\"" $data ;;
+				49)  yq -r ".trinity8.\"$cal\"" $data ;;
+				56)  yq -r ".trinity9.\"$cal\"" $data ;;
+				63)  yq -r ".trinity10.\"$cal\"" $data ;;
+				70)  yq -r ".trinity11.\"$cal\"" $data ;;
+				77)  yq -r ".trinity12.\"$cal\"" $data ;;
+				84)  yq -r ".trinity13.\"$cal\"" $data ;;
+				91)  yq -r ".trinity14.\"$cal\"" $data ;;
+				98)  yq -r ".trinity15.\"$cal\"" $data ;;
+				105) yq -r ".trinity16.\"$cal\"" $data ;;
+				112) yq -r ".trinity17.\"$cal\"" $data ;;
+				119) yq -r ".trinity18.\"$cal\"" $data ;;
+				126) yq -r ".trinity19.\"$cal\"" $data ;;
+				133) yq -r ".trinity20.\"$cal\"" $data ;;
+				140) yq -r ".trinity21.\"$cal\"" $data ;;
+				147) yq -r ".trinity22.\"$cal\"" $data ;;
+				154) yq -r ".trinity23.\"$cal\"" $data ;;
+				161) yq -r ".trinity24.\"$cal\"" $data ;;
+				168) yq -r ".trinity25.\"$cal\"" $data ;;
+				175) yq -r ".trinity26.\"$cal\"" $data ;;
+				182) yq -r ".trinity27.\"$cal\"" $data ;;
+				189) yq -r ".trinity28.\"$cal\"" $data ;;
+				196) yq -r ".trinity29.\"$cal\"" $data ;;
 			esac
 			exit
 		fi

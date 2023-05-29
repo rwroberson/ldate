@@ -1,0 +1,206 @@
+# Advent
+
+advent1:
+  custom: "First Lord's Day in Advent"
+  2019: "The First Sunday in Advent"
+advent2:
+  custom: "Second Lord's Day in Advent"
+  2019: "The Second Sunday in Advent"
+advent3:
+  custom: "Third Lord's Day in Advent"
+  2019: "The Third Sunday in Advent"
+advent4:
+  custom: "Fourth Lord's Day in Advent"
+  2019: "The Fourth Sunday in Advent"
+
+# Christmas
+
+christmas1:
+  custom: "First Lord's Day of Christmas"
+  2019: "The First Sunday of Christmas"
+christmas2:
+  custom: "Second Lord's Day of Christmas"
+  2019: "The Second Sunday of Christmas"
+
+# Epiphany
+
+epiphany1:
+  custom: "Epiphany Sunday"
+  2019: "The First Sunday of Epiphany"
+epiphany2:
+  custom: "Second Lord's Day After Epiphany"
+  2019: "The Second Sunday of Epiphany"
+epiphany3:
+  custom: "Third Lord's Day After Epiphany"
+  2019: "The Third Sunday of Epiphany"
+epiphany4:
+  custom: "Fourth Lord's Day After Epiphany"
+  2019: "The Fourth Sunday of Epiphany"
+epiphany5:
+  custom: "Fifth Lord's Day After Epiphany"
+  2019: "The Fifth Sunday of Epiphany"
+epiphany6:
+  custom: "Sixth Lord's Day After Epiphany"
+  2019: "The Sixth Sunday of Epiphany"
+epiphany7:
+  custom: "Seventh Lord's Day After Epiphany"
+  2019: "The Seventh Sunday of Epiphany"
+epiphany8:
+  custom: "Eighth Lord's Day After Epiphany"
+  2019: "The Eighth Sunday of Epiphany"
+epiphany9:
+  custom: "Ninth Lord's Day After Epiphany"
+  2019: "The Ninth Sunday of Epiphany"
+epiphany10:
+  custom: "Tenth Lord's Day After Epiphany"
+  2019: "The Tenth Sunday of Epiphany"
+
+# Lent
+
+lent1:
+  custom: "First Lord's Day in Lent"
+  2019: "The First Sunday in Lent"
+lent2:
+  custom: "Second Lord's Day in Lent"
+  2019: "The Second Sunday in Lent"
+lent3:
+  custom: "Third Lord's Day in Lent"
+  2019: "The Third Sunday in Lent"
+lent4:
+  custom: "Fourth Lord's Day in Lent"
+  2019: "The Fourth Sunday in Lent"
+lent5:
+  custom: "Fifth Lord's Day in Lent"
+  2019: "The Fifth Sunday in Lent"
+lent6:
+  custom: "Palm Sunday"
+  2019: "Palm Sunday"
+
+# Easter
+
+easter1:
+  custom: "Resurrection Sunday"
+  2019: "Easter Day"
+easter2:
+  custom: "First Lord's Day After Easter"
+  2019: "The Second Sunday of Easter"
+easter3:
+  custom: "Second Lord's Day After Easter"
+  2019: "The Third Sunday of Easter"
+easter4:
+  custom: "Third Lord's Day After Easter"
+  2019: "The Fourth Sunday of Easter"
+easter5:
+  custom: "Fourth Lord's Day After Easter"
+  2019: "The Fifth Sunday of Easter"
+easter6:
+  custom: "Fifth Lord's Day After Easter"
+  2019: "The Sixth Sunday of Easter"
+ascension:
+  custom: "Ascension Sunday"
+  2019: "The Sunday After Ascension Day"
+pentecost:
+  custom: "Pentecost Sunday"
+  2019: "Day of Pentecost"
+
+# Trinity
+
+trinity1:
+  custom: "Trinity Sunday"
+  2019: "Trinity Sunday"
+trinity2:
+  custom: "Second Lord's Day After Pentecost"
+  2019: "The Second Sunday After Pentecost"
+trinity3:
+  custom: "Third Lord's Day After Pentecost"
+  2019: "The Third Sunday After Pentecost"
+trinity4:
+  custom: "Fourth Lord's Day After Pentecost"
+  2019: "The Fourth Sunday After Pentecost"
+trinity5:
+  custom: "Fifth Lord's Day After Pentecost"
+  2019: "The Fifth Sunday After Pentecost"
+trinity6:
+  custom: "Sixth Lord's Day After Pentecost"
+  2019: "The Sixth Sunday After Pentecost"
+trinity7:
+  custom: "Seventh Lord's Day After Pentecost"
+  2019: "The Seventh Sunday After Pentecost"
+trinity8:
+  custom: "Eighth Lord's Day After Pentecost"
+  2019: "The Eighth Sunday After Pentecost"
+trinity9:
+  custom: "Ninth Lord's Day After Pentecost"
+  2019: "The Ninth Sunday After Pentecost"
+trinity10:
+  custom: "Tenth Lord's Day After Pentecost"
+  2019: "The Tenth Sunday After Pentecost"
+trinity11:
+  custom: "Eleventh Lord's Day After Pentecost"
+  2019: "The Eleventh Sunday After Pentecost"
+trinity12:
+  custom: "Twelfth Lord's Day After Pentecost"
+  2019: "The Twelfth Sunday After Pentecost"
+trinity13:
+  custom: "Thirteenth Lord's Day After Pentecost"
+  2019: "The Thirteenth Sunday After Pentecost"
+trinity14:
+  custom: "Fourteenth Lord's Day After Pentecost"
+  2019: "The Fourteenth Sunday After Pentecost"
+trinity15:
+  custom: "Fifteenth Lord's Day After Pentecost"
+  2019: "The Fifteenth Sunday After Pentecost"
+trinity16:
+  custom: "Sixteenth Lord's Day After Pentecost"
+  2019: "The Sixteenth Sunday After Pentecost"
+trinity17:
+  custom: "Seventeenth Lord's Day After Pentecost"
+  2019: "The Seventeenth Sunday After Pentecost"
+trinity18:
+  custom: "Eighteenth Lord's Day After Pentecost"
+  2019: "The Eighteenth Sunday After Pentecost"
+trinity19:
+  custom: "Nineteenth Lord's Day After Pentecost"
+  2019: "The Nineteenth Sunday After Pentecost"
+trinity20:
+  custom: "Twentieth Lord's Day After Pentecost"
+  2019: "The Twentieth Sunday After Pentecost"
+trinity21:
+  custom: "Twenty-First Lord's Day After Pentecost"
+  2019: "The Twenty-First Sunday After Pentecost"
+trinity22:
+  custom: "Twenty-Second Lord's Day After Pentecost"
+  2019: "The Twenty-Second Sunday After Pentecost"
+trinity23:
+  custom: "Twenty-Third Lord's Day After Pentecost"
+  2019: "The Twenty-Third Sunday After Pentecost"
+trinity24:
+  custom: "Twenty-Fourth Lord's Day After Pentecost"
+  2019: "The Twenty-Fourth Sunday After Pentecost"
+trinity25:
+  custom: "Twenty-Fifth Lord's Day After Pentecost"
+  2019: "The Twenty-Fifth Sunday After Pentecost"
+trinity26:
+  custom: "Twenty-Sixth Lord's Day After Pentecost"
+  2019: "The Twenty-Sixth Sunday After Pentecost"
+trinity27:
+  custom: "Twenty-Seventh Lord's Day After Pentecost"
+  2019: "The Twenty-Seventh Sunday After Pentecost"
+trinity28:
+  custom: "Twenty-Eighth Lord's Day After Pentecost"
+  2019: "The Twenty-Eighth Sunday After Pentecost"
+trinity29:
+  custom: "Twenty-Ninth Lord's Day After Pentecost"
+  2019: "The Twenty-Ninth Sunday After Pentecost"
+king:
+  custom: "Christ the King Sunday"
+  2019: "Christ the King Sunday"
+
+# Specials
+
+reformation:
+  custom: "Reformation Sunday"
+
+saints:
+  custom: "All Saints' Day"
+  2019: "All Saints' Day"
