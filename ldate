@@ -5,7 +5,7 @@
 # days, but it may be edited for other traditions.
 
 cal="2019" # options: custom, 2019
-data="data.yaml"
+data="$HOME/repos/ldate/data.yaml"
 
 # Define key days
 EAS=$(date -d $(ncal -e) +%j)
