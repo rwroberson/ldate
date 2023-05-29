@@ -4,7 +4,16 @@
 # is designed for my own church's Reformed focus on the five evangelical feast 
 # days, but it may be edited for other traditions.
 
-cal="2019" # options: custom, 2019
+cal="custom" # options: custom, 2019, rcl
+
+while getopts c: flag
+do
+	case "${flag}" in 
+		c) cal=${OPTARG} ;;
+		*) echo "Invalid option: -$flag" ;;
+	esac
+done
+
 data="$HOME/repos/ldate/data.yaml"
 
 # Define key days
@@ -50,14 +59,17 @@ case $DOW in
 esac
 
 SUN=${SUN#00}
-#SUN="300"
+#SUN="302"
 
 # Special days
 
-# TODO: build a test for null cases
+TRANS=$(( $EAS - 49 ))
+TRANS="${TRANS#00}"
+
 case $SUN in
-	29[7-9] | 30[0-4]) yq -r ".reformation.\"$cal\"" $data && exit ;;
-	30[5-9] | 31[0-2]) yq -r ".saints.\"$cal\"" $data && exit ;;
+	$TRANS ) [[ "$(yq -r ".transfiguration.\"$cal\"" $data)" != "" ]] && yq -r ".transfiguration.\"$cal\"" $data && exit ;;
+	29[7-9] | 30[0-4] ) [[ "$(yq -r ".reformation.\"$cal\"" $data)" != "" ]] && yq -r ".reformation.\"$cal\"" $data && exit ;;
+	30[5-9] | 31[0-2] ) yq -r ".saints.\"$cal\"" $data && exit ;;
 esac
 	
 
