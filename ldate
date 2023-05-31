@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # This script prints the name of next Sunday on the church calendar. The script 
 # is designed for my own church's Reformed focus on the five evangelical feast 
@@ -69,20 +69,20 @@ TRANS=$(( $EAS - 49 ))
 TRANS="${TRANS#00}"
 
 case $SUN in
-	$TRANS ) [[ "$(yq -r ".transfiguration.\"$cal\"" $data)" != "" ]] && yq -r ".transfiguration.\"$cal\"" $data && exit ;;
-	29[7-9] | 30[0-4] ) [[ "$(yq -r ".reformation.\"$cal\"" $data)" != "" ]] && yq -r ".reformation.\"$cal\"" $data && exit ;;
+	$TRANS ) [ "$(yq -r ".transfiguration.\"$cal\"" $data)" != "" ] && yq -r ".transfiguration.\"$cal\"" $data && exit ;;
+	29[7-9] | 30[0-4] ) [ "$(yq -r ".reformation.\"$cal\"" $data)" != "" ] && yq -r ".reformation.\"$cal\"" $data && exit ;;
 	30[5-9] | 31[0-2] ) yq -r ".saints.\"$cal\"" $data && exit ;;
 esac
 	
 
-if [[ $SUN -lt $EAS ]]; then
+if [ $SUN -lt $EAS ]; then
 
-	if [[ $SUN -lt $EPI ]]; then
+	if [ $SUN -lt $EPI ]; then
 		yq -r ".christmas2.\"$cal\"" $data
 		exit
 
-	elif [[ $SUN -ge $EPI ]]; then
-		if [[ $SUN -lt $ASH ]]; then
+	elif [ $SUN -ge $EPI ]; then
+		if [ $SUN -lt $ASH ]; then
 
 			# dates after Epiphany
 			WEEK=$(( $SUN - $EPI ))
@@ -100,7 +100,7 @@ if [[ $SUN -lt $EAS ]]; then
 			esac
 			exit
 
-		elif [[ $SUN -gt $ASH ]]; then
+		elif [ $SUN -gt $ASH ]; then
 
 			# dates in Lent
 			WEEK=$(( $SUN - $ASH ))
@@ -116,14 +116,14 @@ if [[ $SUN -lt $EAS ]]; then
 		fi
 	fi
 
-elif [[ $SUN -eq $EAS ]]; then
+elif [ $SUN -eq $EAS ]; then
 	yq -r ".easter1.\"$cal\"" $data
 	exit
 
-elif [[ $SUN -gt $EAS ]]; then
+elif [ $SUN -gt $EAS ]; then
 
 	# dates after Easter
-	if [[ $SUN -lt $TRI ]]; then
+	if [ $SUN -lt $TRI ]; then
 		WEEK=$(( $SUN - $EAS ))
 		case $WEEK in
 			7)  yq -r ".easter2.\"$cal\"" $data ;;
@@ -138,7 +138,7 @@ elif [[ $SUN -gt $EAS ]]; then
 	
 	# dates after Trinity
 	else
-		if [[ $SUN -gt 324 ]]; then
+		if [ $SUN -gt 324 ]; then
 			WEEK=$(( $CHR - $SUN ))
 			case $WEEK in
 				35) yq -r ".king.\"$cal\"" $data ;;
