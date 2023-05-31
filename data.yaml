@@ -71,8 +71,6 @@ epiphany10:
   2019: "The Tenth Sunday of Epiphany"
   rcl: "Tenth Sunday after Epiphany"
 
-# TODO: Find a way to include Transfiguration Sunday
-
 # Lent
 
 lent1:
@@ -138,9 +136,9 @@ pentecost:
 # Trinity
 
 trinity1:
-  custom: "Trinity Sunday (custom)"
-  2019: "Trinity Sunday (2019)"
-  rcl: "Trinity Sunday (RCL)"
+  custom: "Trinity Sunday"
+  2019: "Trinity Sunday"
+  rcl: "Trinity Sunday"
 trinity2:
   custom: "Second Lord's Day After Pentecost"
   2019: "The Second Sunday After Pentecost"
