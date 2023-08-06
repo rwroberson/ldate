@@ -60,7 +60,7 @@ case $DOW in
 	Sat) SUN=$(date -d "$DATE 1 days" +%j) ;;
 esac
 
-SUN=${SUN#00}
+SUN=${SUN#0}
 #SUN="302"
 
 # Special days
