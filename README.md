@@ -1,5 +1,8 @@
 # ldate.sh
 
+**NOTE: The script only seems to be working for dates within a year or so of the current date.
+The issue is unresolved, but the script accurately displays information for dates in the near future.** 
+
 This simple script finds the liturgical observance for the upcoming Sunday.
 In particular, it finds the correct observance for my own Reformed church which bases its calendar around the five evangelical feast days.
 It can easily be modified for other calendars.
